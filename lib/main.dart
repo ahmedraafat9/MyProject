@@ -52,7 +52,8 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 ElevatedButton(
-                  onPressed: () {
+
+                : () {
                     showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
@@ -130,12 +131,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         itemBuilder: (context, index) {
                           return ListTile(
                             title: Text(
-                              snapshot.data!.docs[index]['name'],
+                              snapshot.data!.docs[index]['Email'],
                             ),
                           );
                         },
                       )
-                          : snapshot.hasError ?  Text('Error is happening') : CircularProgressIndicator();
+                          : snapshot.hasError ?  Text('') : CircularProgressIndicator();
                     },
                   ),
               ],
